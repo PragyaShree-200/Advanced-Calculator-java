@@ -1,0 +1,105 @@
+import java.util.Scanner;
+public class display
+ {
+ public static void main(String args[])
+   {
+   Scanner sc=new Scanner(System.in);
+   boolean choice=true;
+   while(choice)
+    {
+    System.out.println("Here are your list of operation from which you can choose");
+    System.out.println("Operation 1: Addition");
+    System.out.println("Operation 2: Subtraction");
+    System.out.println("Operation 3: Multiplication");
+    System.out.println("Operation 4: Division");
+    System.out.println("Operation 5: Modulus");
+    System.out.println("Operation 6: Power of any number");
+    System.out.println("Operation 7: Square root of any number");
+    System.out.println("Operation 8: Exit");
+    System.out.println("Enter your choice");
+    int choose=sc.nextInt();
+    double a,b,result;
+    switch(choose)
+     {
+     case 1:
+     System.out.println("Enter two numbers:");
+     a=sc.nextDouble();
+     b=sc.nextDouble();
+     result=a+b;
+     System.out.println("Result: " + result);
+     break;
+      case 2:
+      System.out.println("Enter two numbers:");
+      a=sc.nextDouble();
+      b=sc.nextDouble();
+      result=a-b;
+      System.out.println("Result: " + result);
+      break;
+       case 3:
+       System.out.println("Enter two numbers: ");
+       a=sc.nextDouble();
+       b=sc.nextDouble();
+       result=a*b;
+       System.out.println("Result: " + result);
+       break;
+        case 4:
+        System.out.println("Enter two numbers: ");
+        a=sc.nextDouble();
+        b=sc.nextDouble();
+        if(b!=0.0)
+         {
+         result=a/b;
+         System.out.println("Result: " + result);
+         }
+        else
+         {
+         System.out.println("ERROR!! Division by zero in undefined");
+         }
+        break;
+        case 5:
+        System.out.println("Enter two numbers: ");
+        a=sc.nextDouble();
+        b=sc.nextDouble();
+        if(b!=0.0)
+         {
+         result=a%b;
+         System.out.println("Result: " + result);
+         }
+        else
+         {
+         System.out.println("ERROR!! Division by zero in undefined");
+         }
+        break;
+         case 6:
+         System.out.println("Enter a number: ");
+         a=sc.nextDouble();
+         System.out.println("Enter the power that needs to be raised: ");
+         b=sc.nextDouble();
+         result=Math.pow(a,b);
+         System.out.println("Result: " + result);
+         break;
+          case 7:
+          System.out.println("Enter a number: ");
+          a=sc.nextDouble();
+           if(a>=0)
+            {
+            result=Math.sqrt(a);
+            System.out.println("Result: " + result);
+            }
+           else
+            {
+            System.out.println("ERROR!! Square root of negative numbers do not exist");
+            }
+         break;
+          case 8:
+          System.out.println("Exiting calculator");
+          choice=false;
+          break;
+           default:
+           System.out.println("Invalid Choice: Please try again");
+        }
+       }
+ sc.close();
+}
+}
+
