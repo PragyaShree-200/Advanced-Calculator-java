@@ -7,7 +7,7 @@ public class display
    boolean choice=true;
    while(choice)
     {
-    System.out.println("Here are your list of operation from which you can choose");
+    System.out.println("Here is your list of operations from which you can choose");
     System.out.println("Operation 1: Addition");
     System.out.println("Operation 2: Subtraction");
     System.out.println("Operation 3: Multiplication");
@@ -16,7 +16,7 @@ public class display
     System.out.println("Operation 6: Power of any number");
     System.out.println("Operation 7: Square root of any number");
     System.out.println("Operation 8: Exit");
-    System.out.println("Enter your choice");
+    System.out.println("Enter your choice number");
     int choose=sc.nextInt();
     double a,b,result;
     switch(choose)
